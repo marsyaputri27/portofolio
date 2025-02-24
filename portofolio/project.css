@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body */
+
 body {
     background-color: #000;
     color: white;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
+
 header {
     width: 100%;
     position: fixed;
@@ -74,7 +74,7 @@ header ul li a:hover {
 ul li a {
     display: flex;
 }
-/* Main Container (Left and Right) */
+
 
 .sub-title{
     text-align: center;
@@ -101,14 +101,14 @@ ul li a {
 .main-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Agar kontainer sejajar dari atas */
+    align-items: flex-start; 
     width: 100%;
 }
 
-/* Left and Right Containers */
+
 .left-container, .right-container {
     transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 48%;  /* Sesuaikan agar kedua kontainer sejajar */
+    width: 48%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,13 +219,8 @@ footer {
     text-decoration: none;
 }
 
-/* RESPONSIF */
 
-/* Tablet */
 @media (max-width: 768px) {
-  /*  nav ul {
-        gap: 20px;
-    }*/
     #menu {
         display: none;
         flex-direction: column;
@@ -272,8 +267,11 @@ footer {
         justify-content: center;
     }
 
-    .buttons{
-      display: block;
+      .buttons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 10px; 
+        justify-content: center; 
     }
     .scroll-container {
         width: 95%;
@@ -295,17 +293,9 @@ footer {
     }
 }
 
-/* HP */
-@media (max-width: 480px) {
- /*   nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    nav ul li a {
-        display: block;
-        text-align: center;
-    }*/
+@media (max-width: 480px) {
+
     #menu{ 
         margin-top: 20%;
     }
