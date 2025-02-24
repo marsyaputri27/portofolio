@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body */
+
 body {
     background-color: #000;
     color: white;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
+
 header {
     width: 100%;
     position: fixed;
@@ -86,7 +86,7 @@ ul li a {
     width: 100%;
 }
 
-/* Bagian gambar */
+
 .image-section {
     flex: 1;
     display: flex;
@@ -139,7 +139,6 @@ ul li a {
     line-height: 1.6;
 }
 
-/*skills*/
 h1{
     animation: pulse 1s infinite alternate ease-in-out;
     margin-bottom: 10px;
@@ -174,7 +173,7 @@ h1{
 
 .image {
     display: block;
-    width: 30%; /* Menyesuaikan ukuran gambar */
+    width: 30%; 
     height: auto;
 }
 
@@ -196,8 +195,6 @@ h1{
 }
 
 
-
-/* FOOTER */
 footer {
     background-color: #413F42;
     color: white;
@@ -238,14 +235,10 @@ footer {
     text-decoration: none;
 }
 
-/* RESPONSIF */
 
-/* Tablet */
+
+
 @media (max-width: 768px) {
-  /*  nav ul {
-        gap: 20px;
-    }*/
-
     .grid-container {
         grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
     }
@@ -311,18 +304,8 @@ footer {
     }
 }
 
-/* HP */
+
 @media (max-width: 480px) {
- /*   nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul li a {
-        display: block;
-        text-align: center;
-    }*/
-
     .grid-container {
         grid-template-columns: repeat(1, 1fr); /* 1 kolom di HP */
     }
