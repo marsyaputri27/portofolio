@@ -1,0 +1,354 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #3A3737;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s ease;
+
+}
+
+header ul li a:hover {
+    cursor: url("New folder/hand-sparkles-solid.svg"), auto;
+    color:black;
+    background-color:white;
+
+}
+
+#menu-toggle {
+    display: none;
+}
+  
+#hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    
+}
+  
+ul li a {
+    display: flex;
+}
+
+.about-container {
+    margin-top: 6%;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 80px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Bagian gambar */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-section img {
+    width: 130%;
+    height: 100%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.image-section img:hover{
+    transform: scale(1.1); 
+}
+
+/* Bagian konten */
+.content-section {
+    flex: 2;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.content-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    overflow: hidden;  /* Agar teks terpotong saat animasi berjalan */
+    white-space: nowrap; /* Mencegah teks turun ke baris berikutnya */
+    border-right: 3px solid black;
+    width: 0;  
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+.content-section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/*skills*/
+h1{
+    animation: pulse 1s infinite alternate ease-in-out;
+    margin-bottom: 10px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.1); /* Besarnya bisa disesuaikan */
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    place-items: center; 
+    height: 50vh; 
+    margin-bottom: 10%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    display: block;
+    width: 30%; /* Menyesuaikan ukuran gambar */
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 70%;
+    transition: .5s ease;
+    opacity: 0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: #413F42;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-container div {
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.footer-container div:first-child {
+    text-align: center;
+}
+
+.footer-container div:last-child {
+    text-align: center;
+}
+
+.gmail a{
+    color: white;
+    text-decoration: none;
+}
+
+/* RESPONSIF */
+
+/* Tablet */
+@media (max-width: 768px) {
+  /*  nav ul {
+        gap: 20px;
+    }*/
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+    
+    .container {
+        max-width: 120px;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 65%;
+        margin-top: 10%;
+        z-index: 10;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 25px;
+        border-radius: 20px;
+        border: none;
+        transition: 0.3s ease;
+        text-align: center;
+        cursor: url("New folder/hand-sparkles-solid.svg"), auto;   cursor: pointer;
+    }
+    
+    #menu-toggle:checked ~ #menu {
+        display: flex;
+    }
+    
+    #hamburger {
+        float: right;
+        margin-top: 20px;
+        margin-right: 50px;
+        display: block;
+    }
+    #menu:hover{
+        cursor: url("New folder/hand-sparkles-solid.svg"), auto;   cursor: pointer;
+        background-color: white;
+        color: #000;
+    }
+
+    .about-container {
+        flex-direction: column; /* Ubah jadi tumpukan di layar kecil */
+        text-align: center;
+    }
+
+    .image-section img {
+        max-width: 250px;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container div {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+ /*   nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }*/
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 kolom di HP */
+    }
+
+    .container {
+        max-width: 100px;
+    }
+
+    .overlay {
+        font-size: 12px;
+        padding: 8px;
+    }
+    #menu{ 
+        margin-top: 20%;
+    }
+    #hamburger{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    .about-container{
+        margin-top: 30%;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,389 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #3A3737;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s ease;
+
+}
+
+header ul li a:hover {
+    cursor: url("New folder/hand-sparkles-solid.svg"), auto;
+    color:black;
+    background-color:white;
+
+}
+
+#menu-toggle {
+    display: none;
+}
+  
+#hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    
+}
+  
+ul li a {
+    display: flex;
+}
+/* Main Container (Left and Right) */
+
+.sub-title{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+.sub-title img {
+    width: 30%;
+    animation: pulse 1s infinite alternate ease-in-out;
+}
+
+/* Animasi membesar-mengecil */
+@keyframes pulse {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.2); /* Besarnya bisa disesuaikan */
+    }
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Agar kontainer sejajar dari atas */
+    width: 100%;
+}
+
+/* Left and Right Containers */
+.left-container, .right-container {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 48%;  /* Sesuaikan agar kedua kontainer sejajar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Laptop */
+.laptop img {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 10px;
+}
+
+/* Info Box */
+.info-box {
+    background-color: #3A3737;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: #5b42a1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    
+}
+    
+.left-container:hover, .right-container:hover {
+    transform: scale(1.1); 
+    
+}
+    
+
+
+.scroll-container {
+    width: 100%;
+    max-width: 1200px; 
+    overflow-x: auto;
+    white-space: nowrap; /* Mencegah gambar turun ke bawah */
+    padding: 10px;
+    display: flex; 
+    gap: 10px;
+    margin-bottom: 10%;
+}
+  
+.scroll-container img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Menjaga rasio aspek gambar */
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+    background-color:#413F42;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-container div {
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.footer-container div:first-child {
+    text-align: center;
+}
+
+.footer-container div:last-child {
+    text-align: center;
+}
+
+.gmail a{
+    color: white;
+    text-decoration: none;
+}
+
+/* RESPONSIF */
+
+/* Tablet */
+@media (max-width: 768px) {
+  /*  nav ul {
+        gap: 20px;
+    }*/
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 65%;
+        margin-top: 10%;
+        z-index: 10;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 25px;
+        border-radius: 20px;
+        border: none;
+        transition: 0.3s ease;
+        text-align: center;
+        cursor: url("New folder/hand-sparkles-solid.svg"), auto;   cursor: pointer;
+    }
+    
+    #menu-toggle:checked ~ #menu {
+        display: flex;
+    }
+    
+    #hamburger {
+        float: right;
+        margin-top: 20px;
+        margin-right: 50px;
+        display: block;
+    }
+    #menu:hover{
+        cursor: url("New folder/hand-sparkles-solid.svg"), auto;   cursor: pointer;
+        background-color: white;
+        color: #000;
+    }
+
+    .about-container {
+        flex-direction: column; /* Ubah jadi tumpukan di layar kecil */
+        text-align: center;
+    }
+
+    .image-section img {
+        max-width: 250px;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .buttons{
+      display: block;
+    }
+    .scroll-container {
+        width: 95%;
+        overflow-x: scroll;
+        padding: 5px;
+        margin: 20px;
+    }
+    
+
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container div {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+ /*   nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }*/
+    #menu{ 
+        margin-top: 20%;
+    }
+    #hamburger{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    .about-container{
+        margin-top: 30%;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .first{
+        margin-top: 25%;
+    }
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .left-container, .right-container {
+        width: 80%;
+        align-items: center;
+        
+    }
+
+    .laptop img{
+        margin-right: 59px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        gap: 20px;
+    }
+
+    .left-container, .right-container {
+        width: 90%;
+    }
+
+    .laptop img {
+        max-width: 250px;
+    }
+
+    .info-box {
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        gap: 15px;
+    }
+
+    .left-container, .right-container {
+        width: 100%;
+    }
+
+    .laptop img {
+        max-width: 200px;
+    }
+
+    .info-box {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
