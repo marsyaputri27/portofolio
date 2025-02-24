@@ -114,14 +114,14 @@ ul li a {
     align-items: center;
 }
 
-/* Laptop */
+
 .laptop img {
     width: 50%;
     margin-left: 25%;
     margin-bottom: 10px;
 }
 
-/* Info Box */
+
 .info-box {
     background-color: #3A3737;
     padding: 20px;
@@ -133,7 +133,7 @@ ul li a {
 }
 
 
-/* Buttons */
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -174,11 +174,6 @@ button {
     object-fit: cover; /* Menjaga rasio aspek gambar */
 }
 
-
-
-
-
-/* FOOTER */
 footer {
     background-color:#413F42;
     color: white;
