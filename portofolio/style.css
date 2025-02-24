@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +10,11 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Pastikan body setinggi layar */
+    min-height: 100vh;
     justify-content: flex-start; /* Hindari pemusatan vertikal */
 }
 
-/* HEADER */
+
 header {
     width: 100%;
     position: fixed;
@@ -80,10 +79,10 @@ ul li a {
     text-align: left;
     margin-top: 10%;
     margin-left: 5%;
-    display:block; /* Gunakan flexbox */
-    align-items: center; /* Pusatkan vertikal */
-    justify-content: space-between; /* Spasi antara teks dan gambar */
-    width: 90%; /* Atur lebar agar lebih responsif */
+    display:block; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 90%; 
 }
 
 /* Animasi mengetik */
@@ -118,7 +117,7 @@ ul li a {
 
 .image-container{
     display: flex;
-    justify-content: center; /* Pusatkan kolom ke tengah */
+    justify-content: center;
     margin-top: 8%;
     margin-bottom: 10%;
 }
@@ -217,16 +216,10 @@ footer {
     text-decoration: none;
 }
 
-/* RESPONSIF */
 
-/* Tablet */
 @media (max-width: 768px) {
-  /*  nav ul {
-        gap: 20px;
-    }*/
-
     .image-container img {
-        width: 70%; /* Perbesar gambar di layar kecil */
+        width: 70%; 
     }
 
     #menu {
@@ -296,7 +289,7 @@ footer {
 }
 
 .image-container img {
-    width: 50%; /* Agar gambar tidak melebihi container */
+    width: 50%; 
    
 }
 
@@ -326,11 +319,10 @@ footer {
     }
 }
 
-/* HP */
 @media (max-width: 480px) {
 
     .image-container img {
-        width: 90%; /* Hampir penuh di layar HP */
+        width: 90%; 
         margin-top: 0;
     }
     #menu{ 
