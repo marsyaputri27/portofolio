@@ -1,4 +1,4 @@
-
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-
+/* Body */
 body {
     background-color: #000;
     color: white;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-
+/* HEADER */
 header {
     width: 100%;
     position: fixed;
@@ -50,14 +50,12 @@ nav ul li a {
     border-radius: 20px;
     border: none;
     transition: 0.3s ease;
-
 }
 
 header ul li a:hover {
     cursor: url("New folder/hand-sparkles-solid.svg"), auto;
     color:black;
     background-color:white;
-
 }
 
 #menu-toggle {
@@ -68,13 +66,12 @@ header ul li a:hover {
     display: none;
     font-size: 30px;
     color: white;
-    
 }
   
 ul li a {
     display: flex;
 }
-
+/* Main Container (Left and Right) */
 
 .sub-title{
     text-align: center;
@@ -97,64 +94,99 @@ ul li a {
     }
 }
 
-
-.main-container {
+.row-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; 
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
     width: 100%;
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
 }
 
-
-.left-container, .right-container {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 48%; 
+.project-card {
+    width: calc(50% - 20px);
+    min-width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Memberikan rasio 16:9 untuk gambar (standar laptop/video) */
+    overflow: hidden;
+    background-color: #252525;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #1a1a1a;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-
-.laptop img {
-    width: 50%;
-    margin-left: 25%;
-    margin-bottom: 10px;
+.card-header h4 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    margin: 0;
 }
 
-
-.info-box {
-    background-color: #3A3737;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    text-align: center;
-    margin-bottom: 20px;
-    width: 50%;
+.card-header .year {
+    font-size: 14px;
+    color: #888888;
+    font-weight: 500;
 }
 
-
-
-.buttons {
+.tags {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-button {
-    background-color: #5b42a1;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    
+.tag {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #cccccc;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-    
-.left-container:hover, .right-container:hover {
-    transform: scale(1.1); 
-    
-}
-    
-
 
 .scroll-container {
     width: 100%;
@@ -174,6 +206,7 @@ button {
     object-fit: cover; /* Menjaga rasio aspek gambar */
 }
 
+/* FOOTER */
 footer {
     background-color:#413F42;
     color: white;
@@ -214,7 +247,9 @@ footer {
     text-decoration: none;
 }
 
+/* RESPONSIF */
 
+/* Tablet */
 @media (max-width: 768px) {
     #menu {
         display: none;
@@ -262,12 +297,6 @@ footer {
         justify-content: center;
     }
 
-      .buttons{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 10px; 
-        justify-content: center; 
-    }
     .scroll-container {
         width: 95%;
         overflow-x: scroll;
@@ -275,7 +304,9 @@ footer {
         margin: 20px;
     }
     
-
+    .tags {
+        justify-content: center; 
+    }
 
     .footer-container {
         flex-direction: column;
@@ -288,9 +319,12 @@ footer {
     }
 }
 
+a i {
+    color: white; 
+}
 
+/* HP */
 @media (max-width: 480px) {
-
     #menu{ 
         margin-top: 20%;
     }
@@ -310,7 +344,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-
     .first{
         margin-top: 25%;
     }
@@ -323,11 +356,6 @@ footer {
     .left-container, .right-container {
         width: 80%;
         align-items: center;
-        
-    }
-
-    .laptop img{
-        margin-right: 59px;
     }
 }
 
@@ -340,13 +368,8 @@ footer {
         width: 90%;
     }
 
-    .laptop img {
-        max-width: 250px;
-    }
-
-    .info-box {
-        width: 90%;
-        max-width: 250px;
+    .project-card {
+        width: 100%;
     }
 }
 
@@ -357,18 +380,5 @@ footer {
 
     .left-container, .right-container {
         width: 100%;
-    }
-
-    .laptop img {
-        max-width: 200px;
-    }
-
-    .info-box {
-        width: 100%;
-        max-width: 200px;
-    }
-
-    button {
-        padding: 8px 16px;
     }
 }
