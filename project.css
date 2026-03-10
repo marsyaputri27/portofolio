@@ -1,0 +1,384 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #3A3737;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+header ul li a:hover {
+    cursor: url("New folder/hand-sparkles-solid.svg"), auto;
+    color:black;
+    background-color:white;
+}
+
+#menu-toggle {
+    display: none;
+}
+  
+#hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+  
+ul li a {
+    display: flex;
+}
+/* Main Container (Left and Right) */
+
+.sub-title{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+.sub-title img {
+    width: 30%;
+    animation: pulse 1s infinite alternate ease-in-out;
+}
+
+/* Animasi membesar-mengecil */
+@keyframes pulse {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.2); /* Besarnya bisa disesuaikan */
+    }
+}
+
+.row-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: calc(50% - 20px);
+    min-width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Memberikan rasio 16:9 untuk gambar (standar laptop/video) */
+    overflow: hidden;
+    background-color: #252525;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #1a1a1a;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h4 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.card-header .year {
+    font-size: 14px;
+    color: #888888;
+    font-weight: 500;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #cccccc;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.scroll-container {
+    width: 100%;
+    max-width: 1200px; 
+    overflow-x: auto;
+    white-space: nowrap; /* Mencegah gambar turun ke bawah */
+    padding: 10px;
+    display: flex; 
+    gap: 10px;
+    margin-bottom: 10%;
+}
+  
+.scroll-container img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Menjaga rasio aspek gambar */
+}
+
+/* FOOTER */
+footer {
+    background-color:#413F42;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-container div {
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.footer-container div:first-child {
+    text-align: center;
+}
+
+.footer-container div:last-child {
+    text-align: center;
+}
+
+.gmail a{
+    color: white;
+    text-decoration: none;
+}
+
+/* RESPONSIF */
+
+/* Tablet */
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 65%;
+        margin-top: 10%;
+        z-index: 10;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 25px;
+        border-radius: 20px;
+        border: none;
+        transition: 0.3s ease;
+        text-align: center;
+        cursor: url("New folder/hand-sparkles-solid.svg"), auto;   cursor: pointer;
+    }
+    
+    #menu-toggle:checked ~ #menu {
+        display: flex;
+    }
+    
+    #hamburger {
+        float: right;
+        margin-top: 20px;
+        margin-right: 50px;
+        display: block;
+    }
+    #menu:hover{
+        cursor: url("New folder/hand-sparkles-solid.svg"), auto;   cursor: pointer;
+        background-color: white;
+        color: #000;
+    }
+
+    .about-container {
+        flex-direction: column; /* Ubah jadi tumpukan di layar kecil */
+        text-align: center;
+    }
+
+    .image-section img {
+        max-width: 250px;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .scroll-container {
+        width: 95%;
+        overflow-x: scroll;
+        padding: 5px;
+        margin: 20px;
+    }
+    
+    .tags {
+        justify-content: center; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container div {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+a i {
+    color: white; 
+}
+
+/* HP */
+@media (max-width: 480px) {
+    #menu{ 
+        margin-top: 20%;
+    }
+    #hamburger{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    .about-container{
+        margin-top: 30%;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .first{
+        margin-top: 25%;
+    }
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .left-container, .right-container {
+        width: 80%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        gap: 20px;
+    }
+
+    .left-container, .right-container {
+        width: 90%;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        gap: 15px;
+    }
+
+    .left-container, .right-container {
+        width: 100%;
+    }
+}
